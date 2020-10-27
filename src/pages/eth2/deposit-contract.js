@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
+import { Twemoji } from "react-emoji-render" // TODO replace
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -10,7 +11,6 @@ import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Link from "../../components/Link"
 import Tooltip from "../../components/Tooltip"
-import { Twemoji } from "react-emoji-render"
 import Warning from "../../components/Warning"
 
 import {
@@ -442,14 +442,14 @@ export const sourceImage = graphql`
 
 export const query = graphql`
   query {
-    consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
+    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }
-    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
+    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
       ...sourceImage
     }
     etherscan: file(
-      relativePath: { eq: "eth2-staking/etherscan-logo-circle.png" }
+      relativePath: { eq: "projects/etherscan-logo-circle.png" }
     ) {
       ...sourceImage
     }
